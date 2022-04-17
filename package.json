@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-2.0",
+  "version": "1.0.0",
+  "description": "My new portfolio, made simpler and using vanilla JS and webcomponents. Testing what I learned during these last years.",
+  "main": "index.js",
+  "scripts": {
+    "css:watch": "node-sass -w components/ -o ./styles.css",
+    "css": "node-sass styles/styles.scss styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABujalance/portfolio-2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABujalance/portfolio-2.0/issues"
+  },
+  "homepage": "https://github.com/ABujalance/portfolio-2.0#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
