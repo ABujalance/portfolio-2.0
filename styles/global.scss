@@ -1,5 +1,6 @@
-.colorin {
-  &-foo {
-    color: olive;
-  }
+h1 {
+  color: $text-color;
+}
+body {
+  background-color: $background;
 }
