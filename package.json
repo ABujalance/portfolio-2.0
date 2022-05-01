@@ -4,6 +4,7 @@
   "description": "My new portfolio, made simpler and using vanilla JS and webcomponents. Testing what I learned during these last years.",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/ABujalance/portfolio-2.0#readme",
   "devDependencies": {
+    "sass": "^1.51.0",
     "vite": "^2.9.5"
   }
 }

@@ -1,5 +1,5 @@
 import testHtml from "./test.html?raw";
-import testStyle from "./test.css";
+import testStyle from "./test.scss";
 
 class TestComponent extends HTMLElement {
   constructor() {
