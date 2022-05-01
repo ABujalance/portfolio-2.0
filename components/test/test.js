@@ -1,20 +1,20 @@
-fetch("components/test/test.html")
-  .then((stream) => stream.text())
-  .then((text) => define(text));
+import testHtml from "./test.html?raw";
+import testStyle from "./test.css";
 
-function define(html) {
-  debugger;
-  class TestComponent extends HTMLElement {
-    constructor() {
-      super();
+class TestComponent extends HTMLElement {
+  constructor() {
+    super();
 
-      const template = document.createElement('template');
-      template.innerHTML=html
+    const template = document.createElement("template");
+    template.innerHTML = testHtml;
 
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
-    }
+    const style = document.createElement("style");
+    style.innerHTML = testStyle;
+
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(style);
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
-
-  customElements.define("test-element", TestComponent);
 }
+
+customElements.define("test-element", TestComponent);

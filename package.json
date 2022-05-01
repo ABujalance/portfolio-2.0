@@ -4,7 +4,9 @@
   "description": "My new portfolio, made simpler and using vanilla JS and webcomponents. Testing what I learned during these last years.",
   "main": "index.js",
   "scripts": {
-
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ABujalance/portfolio-2.0/issues"
   },
-  "homepage": "https://github.com/ABujalance/portfolio-2.0#readme"
+  "homepage": "https://github.com/ABujalance/portfolio-2.0#readme",
+  "devDependencies": {
+    "vite": "^2.9.5"
+  }
 }
