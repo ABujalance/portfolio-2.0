@@ -6,6 +6,15 @@ body {
   color: colors.$base;
 }
 
+a:visited {
+  color: inherit;
+}
+
+.reverse {
+  background-color: colors.$base;
+  color: #000;
+}
+
 .base {
   color: colors.$base;
 }
@@ -36,4 +45,14 @@ body {
 
 .fill-dark-accent {
   background-color: colors.$dark-accent;
+}
+
+.shadow-link {
+  text-shadow: 1px 1px 1px colors.$background;
+  border: 1px #000;
+  text-decoration: none;
+
+  &:active {
+    text-shadow: none;
+  }
 }
