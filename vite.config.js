@@ -1,7 +1,7 @@
 module.exports = {
   css: {
     preprocessorOptions: {
-      scss: { additionalData: `@import "styles/colors";` },
+      scss: { additionalData: `@use "styles/colors";` },
     },
   },
 };

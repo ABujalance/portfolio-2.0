@@ -1,15 +1,15 @@
-import testHtml from "./test.html?raw";
-import testStyle from "./test.scss";
+import htmlTemplate from "./landing.html?raw";
+import styles from "./landing.scss";
 
-class TestComponent extends HTMLElement {
+export class LandingComponent extends HTMLElement {
   constructor() {
     super();
 
     const template = document.createElement("template");
-    template.innerHTML = testHtml;
+    template.innerHTML = htmlTemplate;
 
     const style = document.createElement("style");
-    style.innerHTML = testStyle;
+    style.innerHTML = styles;
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(style);
@@ -17,4 +17,4 @@ class TestComponent extends HTMLElement {
   }
 }
 
-customElements.define("test-element", TestComponent);
+customElements.define("landing-component", LandingComponent);
