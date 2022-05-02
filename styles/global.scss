@@ -1,5 +1,58 @@
-.colorin {
-  &-foo {
-    color: olive;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+  background-color: colors.$background;
+  font-family: "Open Sans", sans-serif;
+  color: colors.$base;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.reverse {
+  background-color: colors.$base;
+  color: #000;
+}
+
+.base {
+  color: colors.$base;
+}
+
+.identity {
+  color: colors.$identity;
+}
+
+.accent {
+  color: colors.$accent;
+}
+
+.dark-accent {
+  color: colors.$dark-accent;
+}
+
+.fill-base {
+  background-color: colors.$base;
+}
+
+.fill-identity {
+  background-color: colors.$identity;
+}
+
+.fill-accent {
+  background-color: colors.$accent;
+}
+
+.fill-dark-accent {
+  background-color: colors.$dark-accent;
+}
+
+.shadow-link {
+  text-shadow: 1px 1px 1px colors.$background;
+  border: 1px #000;
+  text-decoration: none;
+
+  &:active {
+    text-shadow: none;
   }
 }
