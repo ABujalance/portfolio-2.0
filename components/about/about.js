@@ -1,14 +1,13 @@
-import htmlTemplate from "./app.html?raw";
+import htmlTemplate from "./about.html?raw";
 
-export class AppComponent extends HTMLElement {
+export class AboutComponent extends HTMLElement {
   constructor() {
     super();
 
     const template = document.createElement("template");
     template.innerHTML = htmlTemplate;
-
     this.appendChild(template.content.cloneNode(true));
   }
 }
 
-customElements.define("app-component", AppComponent);
+customElements.define("about-component", AboutComponent);
