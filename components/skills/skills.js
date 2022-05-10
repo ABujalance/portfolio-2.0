@@ -1,6 +1,6 @@
-import htmlTemplate from "./landing.html?raw";
+import htmlTemplate from "./skills.html?raw";
 
-export class LandingComponent extends HTMLElement {
+export class skillsComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -10,4 +10,4 @@ export class LandingComponent extends HTMLElement {
   }
 }
 
-customElements.define("landing-component", LandingComponent);
+customElements.define("skills-component", skillsComponent);

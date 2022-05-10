@@ -1,7 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: colors.$background;
   font-family: "Open Sans", sans-serif;
   color: colors.$base;
 }
+
+section {
+  height: 100vh;
+}
+
+h1 {
+}
+
+@import "./typography.scss";
+@import "./components.scss";

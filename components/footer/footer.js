@@ -1,6 +1,6 @@
-import htmlTemplate from "./landing.html?raw";
+import htmlTemplate from "./footer.html?raw";
 
-export class LandingComponent extends HTMLElement {
+export class FooterComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -10,4 +10,4 @@ export class LandingComponent extends HTMLElement {
   }
 }
 
-customElements.define("landing-component", LandingComponent);
+customElements.define("footer-component", FooterComponent);

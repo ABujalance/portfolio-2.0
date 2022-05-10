@@ -3,7 +3,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   css: {
     preprocessorOptions: {
-      scss: { additionalData: `@use "styles/colors";` },
+      scss: {
+        additionalData: `@use "styles/colors"; @use "styles/utils/breakpoints";`,
+      },
     },
   },
 });
