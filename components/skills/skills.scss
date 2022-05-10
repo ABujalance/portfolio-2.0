@@ -9,13 +9,13 @@
 
   &__content {
     margin: 5%;
-    overflow: hidden;
     font-weight: bolder;
-    color: #000;
+    color: colors.$background;
     background-color: colors.$base;
     border-radius: 45px;
-    padding: 14px 28px;
+    padding: 40px;
     font-size: 24px;
     text-align: center;
+    position: relative;
   }
 }

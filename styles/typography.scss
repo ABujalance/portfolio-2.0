@@ -1,19 +1,59 @@
+@mixin font-sizes {
+  &-xxl {
+    font-size: 4rem;
+  }
+  &-xl {
+    font-size: 3rem;
+  }
+  &-l {
+    font-size: 2rem;
+  }
+  &-m {
+    font-size: 1rem;
+  }
+  &-standard {
+    font-size: 0.8rem;
+  }
+  &-s {
+    font-size: 0.5rem;
+  }
+}
+
 .font {
   &__color {
-    &--identity {
+    &-identity {
       color: colors.$identity;
     }
 
-    &--dark-accent {
+    &-dark-accent {
       color: colors.$dark-accent;
     }
 
-    &--accent {
+    &-accent {
       color: colors.$accent;
     }
 
-    &--base {
+    &-base {
       color: colors.$base;
+    }
+  }
+
+  &__size {
+    @include font-sizes();
+    &__desktop {
+      @include breakpoints.desktop {
+        @include font-sizes();
+      }
+    }
+    &__tablet {
+      @include breakpoints.tablet {
+        @include font-sizes();
+      }
+    }
+    &__mobile {
+      @include breakpoints.mobile {
+        @include font-sizes();
+      }
     }
   }
 }
