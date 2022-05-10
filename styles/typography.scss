@@ -1,0 +1,19 @@
+.font {
+  &__color {
+    &--identity {
+      color: colors.$identity;
+    }
+
+    &--dark-accent {
+      color: colors.$dark-accent;
+    }
+
+    &--accent {
+      color: colors.$accent;
+    }
+
+    &--base {
+      color: colors.$base;
+    }
+  }
+}

@@ -1,6 +1,6 @@
-import htmlTemplate from "./about.html?raw";
+import htmlTemplate from "./skills.html?raw";
 
-export class AboutComponent extends HTMLElement {
+export class skillsComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -10,4 +10,4 @@ export class AboutComponent extends HTMLElement {
   }
 }
 
-customElements.define("about-component", AboutComponent);
+customElements.define("skills-component", skillsComponent);
