@@ -1,6 +1,7 @@
+import { HTMLElementWithTemplate } from "../../../utils/html-element-with-template";
 import htmlTemplate from "./skill-set.html?raw";
 
-export class SkillSetComponent extends HTMLElement {
+export class SkillSetComponent extends HTMLElementWithTemplate {
   constructor() {
     super();
 
