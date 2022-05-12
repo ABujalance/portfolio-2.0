@@ -11,7 +11,7 @@ export class NavComponent extends HTMLElement {
 
   onScroll = () => {
     const navElement = document.getElementById("nav");
-    if (window.scrollY < window.innerHeight) {
+    if (window.scrollY <= window.innerHeight - 1) {
       navElement.classList.remove("show-nav");
     } else {
       navElement.classList.add("show-nav");

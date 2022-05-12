@@ -1,20 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: colors.$background;
   font-family: "Open Sans", sans-serif;
+  background: linear-gradient(colors.$background, 95%, white);
+  background-attachment: fixed;
   color: colors.$base;
+  margin: 0;
 }
 
 section {
   height: 100vh;
-}
-
-h1 {
 }
 
 @import "./typography.scss";

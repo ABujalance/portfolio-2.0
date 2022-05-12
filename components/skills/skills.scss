@@ -8,14 +8,24 @@
   text-align: center;
 
   &__content {
-    margin: 5%;
-    font-weight: bolder;
+    $background: #222;
     color: colors.$background;
     background-color: colors.$base;
-    border-radius: 45px;
-    padding: 40px;
-    font-size: 24px;
-    text-align: center;
-    position: relative;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 5px 10px 10px colors.$shadow;
+    width: 90%;
+
+    @include breakpoints.desktop {
+      min-width: 900px;
+      max-width: 1600px;
+    }
+
+    &__list {
+      display: grid;
+      @include breakpoints.desktop {
+        grid-auto-flow: column;
+      }
+    }
   }
 }
