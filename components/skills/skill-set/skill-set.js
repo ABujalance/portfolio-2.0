@@ -1,5 +1,5 @@
-import { HTMLElementWithTemplate } from "../../../utils/html-element-with-template";
 import htmlTemplate from "./skill-set.html?raw";
+import { HTMLElementWithTemplate } from "../../../utils/html-element-with-template";
 
 export class SkillSetComponent extends HTMLElementWithTemplate {
   constructor() {
