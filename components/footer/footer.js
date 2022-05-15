@@ -1,6 +1,7 @@
 import htmlTemplate from "./footer.html?raw";
+import { HTMLElementWithTemplate } from "../../utils/html-element-with-template";
 
-export class FooterComponent extends HTMLElement {
+export class FooterComponent extends HTMLElementWithTemplate {
   constructor() {
     super();
 

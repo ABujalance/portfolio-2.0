@@ -1,6 +1,7 @@
 import htmlTemplate from "./landing.html?raw";
+import { HTMLElementWithTemplate } from "../../utils/html-element-with-template";
 
-export class LandingComponent extends HTMLElement {
+export class LandingComponent extends HTMLElementWithTemplate {
   constructor() {
     super();
 

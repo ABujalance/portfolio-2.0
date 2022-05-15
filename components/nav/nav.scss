@@ -1,10 +1,33 @@
 .nav {
-  display: flex;
+  display: grid;
   position: fixed;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s ease, opacity 1s ease;
   z-index: 10;
+  padding: 10px;
+
+  @include breakpoints.desktop {
+    grid-auto-flow: column;
+    gap: 30px;
+  }
+
+  & a {
+    text-shadow: 1px 1px 1px colors.$background;
+    text-decoration: none;
+    color: colors.$identity !important;
+
+    &:active {
+      text-shadow: none;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
 }
 
 .show-nav {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }

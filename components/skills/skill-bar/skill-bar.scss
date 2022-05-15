@@ -1,0 +1,37 @@
+.skill-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__name {
+    margin-right: 12px;
+  }
+
+  &__progress-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 20px 0px;
+    position: relative;
+    background-color: transparent;
+    border-radius: 45px;
+    max-width: 0;
+    transition: max-width 3s ease;
+
+    #skills-card.is-flipped & {
+      max-width: 100%;
+    }
+    & span {
+      width: 100%;
+      max-width: 0;
+      display: block;
+      border-radius: 45px;
+      color: colors.$base;
+      text-align: end;
+      background-color: colors.$identity;
+      transition: max-width 2s ease;
+      padding-right: 10px;
+    }
+  }
+}
