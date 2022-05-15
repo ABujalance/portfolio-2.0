@@ -15,6 +15,7 @@
     padding: 20px;
     box-shadow: 5px 10px 10px colors.$shadow;
     width: 90%;
+    height: 80%;
 
     @include breakpoints.desktop {
       min-width: 900px;
@@ -26,6 +27,33 @@
       @include breakpoints.desktop {
         grid-auto-flow: column;
       }
+    }
+
+    &__stats {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__scene {
+    perspective: 600px;
+  }
+
+  &__card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    &.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    &__face {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
     }
   }
 }

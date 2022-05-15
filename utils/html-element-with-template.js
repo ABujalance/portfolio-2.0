@@ -24,6 +24,5 @@ function interpolate(template, params) {
     text.toString().replace(/[&<>\(\)]/g, (tag) => replaceTags[tag] || tag);
   const keys = Object.keys(params);
   const keyVals = Object.values(params).map(safeInnerHTML);
-  debugger;
   return new Function(...keys, `return \`${template}\``)(...keyVals);
 }

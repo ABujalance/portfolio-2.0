@@ -1,6 +1,7 @@
 import htmlTemplate from "./nav.html?raw";
+import { HTMLElementWithTemplate } from "../../utils/html-element-with-template";
 
-export class NavComponent extends HTMLElement {
+export class NavComponent extends HTMLElementWithTemplate {
   constructor() {
     super();
 
@@ -11,7 +12,7 @@ export class NavComponent extends HTMLElement {
 
   onScroll = () => {
     const navElement = document.getElementById("nav");
-    if (window.scrollY <= window.innerHeight - 1) {
+    if (window.scrollY <= window.innerHeight - 50) {
       navElement.classList.remove("show-nav");
     } else {
       navElement.classList.add("show-nav");

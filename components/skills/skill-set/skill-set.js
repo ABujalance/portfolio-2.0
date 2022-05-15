@@ -9,6 +9,21 @@ export class SkillSetComponent extends HTMLElementWithTemplate {
     template.innerHTML = htmlTemplate;
     this.appendChild(template.content.cloneNode(true));
   }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.buildSkillSet();
+  }
+
+  buildSkillSet() {
+    const { title, skillList } = this.attributes;
+    const skillListElement = this.querySelector(`#skill-set-${title.value}`);
+    skillList.value.split(",").forEach((skill) => {
+      const listElement = document.createElement("li");
+      listElement.innerHTML = skill;
+      skillListElement.appendChild(listElement);
+    });
+  }
 }
 
 customElements.define("skill-set-component", SkillSetComponent);
