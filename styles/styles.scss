@@ -16,5 +16,9 @@ section {
   height: 100vh;
 }
 
+h1{
+  margin:0;
+}
+
 @import "./typography.scss";
 @import "./components.scss";

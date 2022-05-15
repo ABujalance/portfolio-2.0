@@ -7,6 +7,20 @@
   flex-direction: column;
   text-align: center;
 
+  &__switch-button{
+    background-color: colors.$accent;
+    color:colors.$base;
+    border: none;
+    border-radius: 5px;
+    padding:5px;
+    &:hover{
+      background-color: colors.$dark-accent;
+    }
+    & .active{
+      background-color: colors.$dark-accent;
+    }
+  }
+
   &__content {
     $background: #222;
     color: colors.$background;

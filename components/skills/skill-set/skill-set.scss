@@ -3,12 +3,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin:0px 20px;
   &__icon {
     color: colors.$identity;
   }
 
   &__list {
     list-style-type: none;
+    width: 100%;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid colors.$identity;
+    border-radius:10px;
+    & li{
+      
+      &:nth-child(even){
+        background-color: colors.$base-dark;
+      }
+    }
   }
 }
