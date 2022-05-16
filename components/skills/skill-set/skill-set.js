@@ -12,35 +12,32 @@ export class SkillSetComponent extends HTMLElementWithTemplate {
 
   connectedCallback() {
     super.connectedCallback();
-    const { title } = this.attributes;
+    const { id } = this.attributes;
     this.buildSkillSet();
-    document.getElementById(`show-skills-${title.value}`).addEventListener("click", () => onShowSkillHandler(title.value));
+    document.getElementById(`show-skills-${id.value}`).addEventListener("click", () => onShowSkillHandler(id.value));
+    document.getElementById(`close-${id.value}`).addEventListener("click", () => onShowSkillHandler(id.value));
   }
 
   buildSkillSet() {
-    const { title, skillList } = this.attributes;
-    const skillListElement = this.querySelector(`#skill-set-${title.value}`);
+    const { id, skillList } = this.attributes;
+    const skillListElement = this.querySelector(`#skill-set-${id.value}`);
     skillList.value.split(",").forEach((skill) => {
       const listElement = document.createElement("li");
       listElement.innerHTML = skill;
       skillListElement.appendChild(listElement);
     });
+    const lastListElement = document.createElement("li");
+    lastListElement.innerHTML = `<button id="close-${id.value}" class="skill-set__list__close hide-desktop">close</button>`;
+    skillListElement.appendChild(lastListElement);
   }
 }
 
-function onShowSkillHandler(title) {
-  const skillListElement = document.querySelector(`#skill-set-${title}`);
+function onShowSkillHandler(id) {
+  const skillListElement = document.querySelector(`#skill-set-${id}`);
   if (skillListElement.classList.contains("show")) {
     skillListElement.classList.remove("show");
   } else {
     skillListElement.classList.add("show");
-  }
-
-  const buttonElement = document.querySelector(`#skills-container-${title}`);
-  if (buttonElement.classList.contains("active")) {
-    buttonElement.classList.remove("active");
-  } else {
-    buttonElement.classList.add("active");
   }
 }
 

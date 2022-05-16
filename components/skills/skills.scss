@@ -84,13 +84,16 @@
     width: 80%;
     height: 80%;
     position: relative;
-    overflow: hidden;
 
     &__title {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 50px;
+
+      @include breakpoints.lt-desktop {
+        margin-bottom: 10px;
+      }
     }
 
     @include breakpoints.desktop {
@@ -99,6 +102,7 @@
     }
 
     &__list {
+      overflow-y: auto;
       display: grid;
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
@@ -117,6 +121,7 @@
 
   &__scene {
     perspective: 600px;
+    height: 80%;
   }
 
   &__card {
