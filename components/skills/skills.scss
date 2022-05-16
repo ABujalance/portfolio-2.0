@@ -29,7 +29,6 @@
     & i {
       font-size: 50px;
 
-
       @include breakpoints.mobile {
         font-size: 35px;
       }
@@ -70,7 +69,6 @@
       &:focus {
         background-color: colors.$accent;
       }
-
     }
   }
 
@@ -122,6 +120,9 @@
   &__scene {
     perspective: 600px;
     height: 80%;
+    @include breakpoints.lt-desktop {
+      height: 100%;
+    }
   }
 
   &__card {
