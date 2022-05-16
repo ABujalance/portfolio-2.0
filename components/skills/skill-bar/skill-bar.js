@@ -12,8 +12,8 @@ export class SkillBarComponent extends HTMLElementWithTemplate {
 
   connectedCallback() {
     super.connectedCallback();
-    const { name, percentage } = this.attributes;
-    const spanElement = this.querySelector(`#${name.value}`);
+    const { id, percentage } = this.attributes;
+    const spanElement = this.querySelector(`#${id.value}`);
     spanElement.style["max-width"] = percentage.value;
   }
 }

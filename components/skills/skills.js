@@ -15,6 +15,7 @@ export class skillsComponent extends HTMLElementWithTemplate {
     skills.forEach((skill) => {
       const skillSetComponent = document.createElement("skill-set-component");
       skillSetComponent.setAttribute("icon", skill.icon);
+      skillSetComponent.setAttribute("id", skill.id);
       skillSetComponent.setAttribute("title", skill.title);
       skillSetComponent.setAttribute("skillList", skill.skillList);
       skillsList.appendChild(skillSetComponent);
@@ -26,27 +27,34 @@ export class skillsComponent extends HTMLElementWithTemplate {
     stats.forEach((stat) => {
       const skillBarComponent = document.createElement("skill-bar-component");
       skillBarComponent.setAttribute("name", stat.name);
+      skillBarComponent.setAttribute("id", stat.id);
       skillBarComponent.setAttribute("percentage", stat.percentage);
       skillsStats.appendChild(skillBarComponent);
     });
   }
 
-  onChangeHandler = () => {
-    const skillsCard = document.querySelector("#skills-card");
-    if (skillsCard.classList.contains("is-flipped")) {
-      skillsCard.classList.remove("is-flipped");
-    } else {
-      skillsCard.classList.add("is-flipped");
-    }
-  };
-
   connectedCallback() {
     this.buildSkillsStats();
     this.buildSkillsList();
     super.connectedCallback();
-    document
-      .getElementById("changeButton")
-      .addEventListener("click", this.onChangeHandler);
+    const switchButton = document.getElementById("switch-button");
+    switchButton.addEventListener("click", onChangeHandler);
+    switchButton.addEventListener("mousedown", (e) => e.preventDefault());
+  }
+}
+
+function onChangeHandler() {
+  const skillsCard = document.querySelector("#skills-card");
+  if (skillsCard.classList.contains("is-flipped")) {
+    skillsCard.classList.remove("is-flipped");
+  } else {
+    skillsCard.classList.add("is-flipped");
+  }
+
+  if (this.classList.contains("active")) {
+    this.classList.remove("active");
+  } else {
+    this.classList.add("active");
   }
 }
 

@@ -3,12 +3,59 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &__icon {
+
+  & i {
     color: colors.$identity;
+    font-size: 64px;
+
+    @include breakpoints.lt-desktop {
+      font-size: 96px;
+    }
+
+    @include breakpoints.short-screen {
+      font-size: 64px;
+    }
+  }
+
+  &__button {
+    all: unset;
+    cursor: pointer;
   }
 
   &__list {
     list-style-type: none;
+    width: 100%;
     padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+    gap: 16px;
+    padding: 10px 0;
+    background-color: colors.$base;
+
+    @include breakpoints.lt-desktop {
+      transition: right 1s ease;
+      visibility: none;
+      height: 90%;
+      position: absolute;
+      top: -20px;
+      border: none;
+      gap: 32px;
+      right: 1000px;
+
+      &.show {
+        visibility: visible;
+        right: 0;
+      }
+    }
+
+    &__close {
+      all: unset;
+      cursor: pointer;
+      color: colors.$dark-accent;
+      font-weight: bolder;
+      background-color: colors.$base;
+    }
   }
+
 }

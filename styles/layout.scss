@@ -1,0 +1,25 @@
+.hide {
+    &-desktop {
+        @include breakpoints.desktop {
+            display: none;
+        }
+    }
+
+    &-lt-desktop {
+        @include breakpoints.lt-desktop {
+            display: none;
+        }
+    }
+
+    &-tablet {
+        @include breakpoints.tablet {
+            display: none;
+        }
+    }
+
+    &-mobile {
+        @include breakpoints.mobile {
+            display: none;
+        }
+    }
+}
