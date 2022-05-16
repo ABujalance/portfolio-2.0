@@ -31,22 +31,26 @@ export class skillsComponent extends HTMLElementWithTemplate {
     });
   }
 
-  onChangeHandler = () => {
-    const skillsCard = document.querySelector("#skills-card");
-    if (skillsCard.classList.contains("is-flipped")) {
-      skillsCard.classList.remove("is-flipped");
-    } else {
-      skillsCard.classList.add("is-flipped");
-    }
-  };
-
   connectedCallback() {
     this.buildSkillsStats();
     this.buildSkillsList();
     super.connectedCallback();
-    document
-      .getElementById("changeButton")
-      .addEventListener("click", this.onChangeHandler);
+    document.getElementById("switch-button").addEventListener("click", onChangeHandler);
+  }
+}
+
+function onChangeHandler() {
+  const skillsCard = document.querySelector("#skills-card");
+  if (skillsCard.classList.contains("is-flipped")) {
+    skillsCard.classList.remove("is-flipped");
+  } else {
+    skillsCard.classList.add("is-flipped");
+  }
+
+  if (this.classList.contains("active")) {
+    this.classList.remove("active");
+  } else {
+    this.classList.add("active");
   }
 }
 

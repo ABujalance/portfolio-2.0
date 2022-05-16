@@ -1,7 +1,7 @@
 $breakpoints: (
   "small": 480px,
   "medium": 1024px,
-) !default;
+  ) !default;
 
 @mixin mobile {
   @media (max-width: map-get($breakpoints, "small")) {
@@ -11,6 +11,12 @@ $breakpoints: (
 
 @mixin tablet {
   @media (min-width: map-get($breakpoints, "small")) and (max-width: map-get($breakpoints, "medium")) {
+    @content;
+  }
+}
+
+@mixin lt-desktop {
+  @media (max-width: map-get($breakpoints, "medium")) {
     @content;
   }
 }

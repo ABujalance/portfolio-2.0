@@ -17,11 +17,12 @@
     background-color: transparent;
     border-radius: 45px;
     max-width: 0;
-    transition: max-width 3s ease;
+    transition: max-width 3s cubic-bezier(0, 0.21, 0.38, 0.91);
 
     #skills-card.is-flipped & {
       max-width: 100%;
     }
+
     & span {
       width: 100%;
       max-width: 0;
@@ -30,7 +31,6 @@
       color: colors.$base;
       text-align: end;
       background-color: colors.$identity;
-      transition: max-width 2s ease;
       padding-right: 10px;
     }
   }

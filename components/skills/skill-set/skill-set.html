@@ -1,5 +1,12 @@
 <div class="skill-set">
-  <h1 class="font__size-l">${title}</h1>
-  <i style="font-size: 50px" class="material-icons md-48 skill-set__icon">${icon}</i>
-  <ul id="skill-set-${title}" class="skill-set__list"></ul>
+  <span class="hide-lt-desktop">
+    <h1 class="font__size-l">${title}</h1>
+    <i class="material-icons">${icon}</i>
+  </span>
+  <div id="skills-container-${title}" class="skill-set__container">
+    <button id="show-skills-${title}" class="skill-set__button hide-desktop">
+      <i class="material-icons">${icon}</i>
+    </button>
+    <ul id="skill-set-${title}" class="skill-set__list"></ul>
+  </div>
 </div>

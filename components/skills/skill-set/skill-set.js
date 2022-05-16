@@ -12,7 +12,9 @@ export class SkillSetComponent extends HTMLElementWithTemplate {
 
   connectedCallback() {
     super.connectedCallback();
+    const { title } = this.attributes;
     this.buildSkillSet();
+    document.getElementById(`show-skills-${title.value}`).addEventListener("click", () => onShowSkillHandler(title.value));
   }
 
   buildSkillSet() {
@@ -23,6 +25,22 @@ export class SkillSetComponent extends HTMLElementWithTemplate {
       listElement.innerHTML = skill;
       skillListElement.appendChild(listElement);
     });
+  }
+}
+
+function onShowSkillHandler(title) {
+  const skillListElement = document.querySelector(`#skill-set-${title}`);
+  if (skillListElement.classList.contains("show")) {
+    skillListElement.classList.remove("show");
+  } else {
+    skillListElement.classList.add("show");
+  }
+
+  const buttonElement = document.querySelector(`#skills-container-${title}`);
+  if (buttonElement.classList.contains("active")) {
+    buttonElement.classList.remove("active");
+  } else {
+    buttonElement.classList.add("active");
   }
 }
 

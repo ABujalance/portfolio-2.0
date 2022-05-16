@@ -7,17 +7,70 @@
   flex-direction: column;
   text-align: center;
 
-  &__switch-button{
+  &__switch-button {
     background-color: colors.$accent;
-    color:colors.$base;
+    color: colors.$base;
     border: none;
-    border-radius: 5px;
-    padding:5px;
-    &:hover{
-      background-color: colors.$dark-accent;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: -1px 1px 10px 3px colors.$shadow;
+
+    @include breakpoints.mobile {
+      width: 50px;
+      height: 40px;
     }
-    & .active{
+
+    & i {
+      font-size: 50px;
+
+
+      @include breakpoints.mobile {
+        font-size: 35px;
+      }
+    }
+
+    &:hover {
       background-color: colors.$dark-accent;
+
+      & i {
+        text-shadow: -2px 2px 2px colors.$shadow;
+      }
+    }
+
+    &:focus {
+      background-color: colors.$dark-accent;
+
+      & i {
+        text-shadow: -2px 2px 2px colors.$shadow;
+      }
+    }
+
+    &:active {
+      background-color: colors.$dark-accent;
+      box-shadow: inset 1px 1px 3px 0px colors.$shadow;
+    }
+
+    &.active {
+      background-color: colors.$dark-accent;
+
+      &:hover {
+        background-color: colors.$accent;
+      }
+
+      &:active {
+        background-color: colors.$accent;
+      }
+
+      &:focus {
+        background-color: colors.$accent;
+      }
+
     }
   }
 
@@ -28,8 +81,17 @@
     border-radius: 30px;
     padding: 20px;
     box-shadow: 5px 10px 10px colors.$shadow;
-    width: 90%;
+    width: 80%;
     height: 80%;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
 
     @include breakpoints.desktop {
       min-width: 900px;
@@ -38,8 +100,13 @@
 
     &__list {
       display: grid;
-      @include breakpoints.desktop {
-        grid-auto-flow: column;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      gap: 20px;
+
+      @include breakpoints.lt-desktop {
+        grid-auto-flow: row;
+        grid-auto-rows: 1fr;
       }
     }
 
