@@ -3,13 +3,7 @@ export const skills = [
     icon: "web",
     id: "frontend",
     title: "Front-End",
-    skillList: [
-      "skill but is a very longadhdagsdgds sentence lorem ipsum",
-      "another skill shorter",
-      "skill",
-      "skill",
-      "skill",
-    ],
+    skillList: ["skill but is a very long lorem sentence lorem ipsum", "<b>another skill shorter</b>", "skill", "skill", "skill"],
   },
   {
     icon: "dns",
@@ -18,7 +12,7 @@ export const skills = [
     skillList: ["skill", "skill", "skill", "skill"],
   },
   {
-    icon: "code",
+    icon: "people",
     id: "code",
     title: "code",
     skillList: ["skill", "skill", "skill"],

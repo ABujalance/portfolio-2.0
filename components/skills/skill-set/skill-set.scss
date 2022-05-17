@@ -5,7 +5,6 @@
   justify-content: center;
 
   & i {
-    color: colors.$identity;
     font-size: 4rem;
 
     @include breakpoints.lt-desktop {
@@ -13,7 +12,7 @@
     }
 
     @include breakpoints.short-screen {
-      font-size: 5rem;
+      font-size: 6rem;
     }
   }
 
@@ -22,27 +21,32 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+    margin-right: 8px;
+
     &__action {
-      background: none;
       color: inherit;
       border: none;
       font: inherit;
-      color: colors.$dark-accent;
-      border: 1px solid colors.$dark-accent;
-      border-radius: 25px;
-      padding: 5px;
+      border: 2px solid colors.$dark-accent;
+      border-radius: 45px;
+      font-weight: bolder;
+      background-color: colors.$dark-accent;
+      color: colors.$base;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
       &:hover {
-        background-color: colors.$dark-accent;
-        color: colors.$base;
+        background: none;
+        color: colors.$dark-accent;
       }
+
       &:active {
-        background-color: colors.$dark-accent;
-        color: colors.$base;
+        background: none;
+        color: colors.$dark-accent;
       }
+
       &:focus {
-        background-color: colors.$dark-accent;
-        color: colors.$base;
+        background: none;
+        color: colors.$dark-accent;
       }
     }
   }
@@ -68,11 +72,12 @@
     gap: 16px;
     padding: 10px 0;
     background-color: colors.$base;
+    margin: 0;
 
     @include breakpoints.lt-desktop {
       transition: right 1s ease;
       visibility: none;
-      height: 90%;
+      height: 100%;
       position: absolute;
       top: -20px;
       border: none;
@@ -91,12 +96,30 @@
 
     &__close {
       background: none;
+      width: 100%;
       color: inherit;
-      border: none;
       font: inherit;
-      color: colors.$dark-accent;
+      border: 2px solid colors.$accent;
+      border-radius: 4px;
+      color: colors.$accent;
       font-weight: bolder;
       background-color: colors.$base;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: colors.$accent;
+        color: colors.$base;
+      }
+
+      &:active {
+        background-color: colors.$accent;
+        color: colors.$base;
+      }
+
+      &:focus {
+        background-color: colors.$accent;
+        color: colors.$base;
+      }
     }
   }
 }
