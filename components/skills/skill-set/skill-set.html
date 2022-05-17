@@ -3,9 +3,17 @@
     <h1 class="font__size-l">${title}</h1>
     <i class="material-icons">${icon}</i>
   </span>
-  <button id="show-skills-${id}" class="skill-set__button hide-desktop">
-    <h1 class="font__size-l font__size__mobile-ml">${id}</h1>
+  <span class="skill-set__container hide-desktop">
+    <span class="skill-set__title">
+      <h1 class="font__size-l font__size__mobile-ml">${title}</h1>
+      <button id="show-skills-${id}" class="skill-set__title__action">
+        View more
+      </button>
+    </span>
     <i class="material-icons">${icon}</i>
-  </button>
-  <ul id="skill-set-${id}" class="skill-set__list font__size-ml font__size__desktop-m"></ul>
+  </span>
+  <ul
+    id="skill-set-${id}"
+    class="skill-set__list font__size-ml font__size__desktop-m"
+  ></ul>
 </div>

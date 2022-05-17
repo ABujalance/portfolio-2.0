@@ -6,20 +6,56 @@
 
   & i {
     color: colors.$identity;
-    font-size: 64px;
+    font-size: 4rem;
 
     @include breakpoints.lt-desktop {
-      font-size: 96px;
+      font-size: 8rem;
     }
 
     @include breakpoints.short-screen {
-      font-size: 64px;
+      font-size: 5rem;
     }
   }
 
-  &__button {
-    all: unset;
-    cursor: pointer;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    &__action {
+      background: none;
+      color: inherit;
+      border: none;
+      font: inherit;
+      color: colors.$dark-accent;
+      border: 1px solid colors.$dark-accent;
+      border-radius: 25px;
+      padding: 5px;
+
+      &:hover {
+        background-color: colors.$dark-accent;
+        color: colors.$base;
+      }
+      &:active {
+        background-color: colors.$dark-accent;
+        color: colors.$base;
+      }
+      &:focus {
+        background-color: colors.$dark-accent;
+        color: colors.$base;
+      }
+    }
+  }
+
+  &__container {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__list {
@@ -40,8 +76,12 @@
       position: absolute;
       top: -20px;
       border: none;
-      gap: 32px;
+      gap: 2rem;
       right: 1000px;
+
+      @include breakpoints.short-screen {
+        gap: 1rem;
+      }
 
       &.show {
         visibility: visible;
@@ -50,12 +90,13 @@
     }
 
     &__close {
-      all: unset;
-      cursor: pointer;
+      background: none;
+      color: inherit;
+      border: none;
+      font: inherit;
       color: colors.$dark-accent;
       font-weight: bolder;
       background-color: colors.$base;
     }
   }
-
 }
