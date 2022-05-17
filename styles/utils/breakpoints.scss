@@ -28,7 +28,7 @@ $breakpoints: (
 }
 
 @mixin short-screen {
-  @media (max-height: "700px") {
+  @media (max-height: "650px") {
     @content;
   }
 }

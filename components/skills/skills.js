@@ -39,7 +39,6 @@ export class skillsComponent extends HTMLElementWithTemplate {
     super.connectedCallback();
     const switchButton = document.getElementById("switch-button");
     switchButton.addEventListener("click", onChangeHandler);
-    switchButton.addEventListener("mousedown", (e) => e.preventDefault());
   }
 }
 

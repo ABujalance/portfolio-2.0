@@ -29,16 +29,19 @@
     & i {
       font-size: 50px;
 
+
       @include breakpoints.mobile {
         font-size: 35px;
       }
     }
 
-    &:hover {
-      background-color: colors.$dark-accent;
+    @media (hover: hover) {
+      &:hover {
+        background-color: colors.$dark-accent;
 
-      & i {
-        text-shadow: -2px 2px 2px colors.$shadow;
+        & i {
+          text-shadow: -2px 2px 2px colors.$shadow;
+        }
       }
     }
 
@@ -58,8 +61,10 @@
     &.active {
       background-color: colors.$dark-accent;
 
-      &:hover {
-        background-color: colors.$accent;
+      @media (hover: hover) {
+        &:hover {
+          background-color: colors.$accent;
+        }
       }
 
       &:active {
@@ -69,6 +74,7 @@
       &:focus {
         background-color: colors.$accent;
       }
+
     }
   }
 
@@ -120,9 +126,6 @@
   &__scene {
     perspective: 600px;
     height: 80%;
-    @include breakpoints.lt-desktop {
-      height: 100%;
-    }
   }
 
   &__card {
