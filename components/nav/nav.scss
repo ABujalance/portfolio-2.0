@@ -1,10 +1,11 @@
 .nav {
   position: fixed;
   visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s ease, opacity 1s ease;
+  top: -200px;
+  transition: visibility 1s ease, top 2s ease;
   z-index: 10;
-  padding: 10px;
+  width: 100%;
+  overflow: hidden;
 
   &__button {
     color: inherit;
@@ -20,12 +21,34 @@
     }
   }
 
-  &__list {
-    display: grid;
+  &__bar {
+    background-color: colors.$base;
 
-    @include breakpoints.desktop {
-      grid-auto-flow: column;
-      gap: 30px;
+    @include breakpoints.gt-mobile {
+      display: grid;
+      grid-template-columns: 20% 1fr 20%;
+    }
+
+
+    @include breakpoints.mobile {
+      visibility: hidden;
+
+      &.show {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include breakpoints.mobile {
+      display: grid;
+      grid-auto-flow: row;
+      z-index: -1;
     }
 
     & a {
@@ -46,5 +69,5 @@
 
 .show-nav {
   visibility: visible;
-  opacity: 1;
+  top: 0;
 }

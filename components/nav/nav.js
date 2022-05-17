@@ -12,7 +12,7 @@ export class NavComponent extends HTMLElementWithTemplate {
 
   onScroll = () => {
     const navElement = document.getElementById("nav");
-    if (window.scrollY <= window.innerHeight - 50) {
+    if (window.scrollY <= window.innerHeight - 200) {
       navElement.classList.remove("show-nav");
     } else {
       navElement.classList.add("show-nav");
@@ -20,7 +20,19 @@ export class NavComponent extends HTMLElementWithTemplate {
   };
 
   connectedCallback() {
+    super.connectedCallback();
     document.addEventListener("scroll", this.onScroll);
+    const navButton = document.getElementById("nav-button");
+    navButton.addEventListener("click", onShowNavHandler);
+  }
+}
+
+function onShowNavHandler() {
+  const navList = document.querySelector("#nav-list");
+  if (navList.classList.contains("show")) {
+    navList.classList.remove("show");
+  } else {
+    navList.classList.add("show");
   }
 }
 

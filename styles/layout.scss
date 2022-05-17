@@ -11,6 +11,12 @@
         }
     }
 
+    &-gt-mobile {
+        @include breakpoints.gt-mobile {
+            display: none;
+        }
+    }
+
     &-tablet {
         @include breakpoints.tablet {
             display: none;
