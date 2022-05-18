@@ -2,10 +2,9 @@
   position: fixed;
   visibility: hidden;
   top: -200px;
-  transition: visibility 1s ease, top 2s ease;
+  transition: visibility 1s ease, top 1s ease;
   z-index: 10;
-  width: 100%;
-  overflow: hidden;
+
 
   &__button {
     color: inherit;
@@ -15,6 +14,8 @@
     opacity: 0.4;
     border-radius: 5px;
     transition: opacity 0.4s ease;
+
+    margin: 10px;
 
     &:hover {
       opacity: 1;
@@ -27,28 +28,40 @@
     @include breakpoints.gt-mobile {
       display: grid;
       grid-template-columns: 20% 1fr 20%;
+      width: 100vw;
+      height: 60px;
     }
 
 
     @include breakpoints.mobile {
+      transition: visibility 1s ease, left 1s ease;
       visibility: hidden;
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      left: -200px;
+      height: 100vh;
+      width: 150px;
 
       &.show {
         visibility: visible;
+        left: 0;
       }
     }
   }
 
   &__list {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
+
     @include breakpoints.mobile {
       display: grid;
       grid-auto-flow: row;
-      z-index: -1;
+      // z-index: -1;
     }
 
     & a {
@@ -63,6 +76,17 @@
       &:visited {
         color: inherit;
       }
+    }
+
+    &__close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 10px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      color: colors.$accent;
     }
   }
 }
