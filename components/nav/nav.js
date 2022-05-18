@@ -25,8 +25,12 @@ export class NavComponent extends HTMLElementWithTemplate {
     const navButton = document.getElementById("nav-button");
     const navList = document.getElementById("nav-list");
     const navClose = document.getElementById("nav-close");
+    const modalBackground = document.getElementById("modal-background");
     navButton.addEventListener("click", (ev) => onShowNavHandler(ev, navList));
     navClose.addEventListener("click", (ev) => onCloseNavHandler(ev, navList));
+    modalBackground.addEventListener("click", (ev) => {
+      onCloseNavHandler(ev, navList);
+    });
   }
 }
 
@@ -49,26 +53,11 @@ function onCloseNavHandler(event, navList) {
 function closeNav(navList) {
   navList.classList.remove("show");
   document.body.classList.remove("modal");
-  document.removeEventListener("click", (e) => {
-    onClickOutsideNavHandler(e, navList);
-  });
 }
 
 function openNav(navList) {
   navList.classList.add("show");
   document.body.classList.add("modal");
-  document.addEventListener("click", (ev) => {
-    onClickOutsideNavHandler(ev, navList);
-  });
-}
-
-function onClickOutsideNavHandler(event, navList) {
-  event.stopPropagation();
-  event.preventDefault();
-  const isClickInsideElement = navList.contains(event.target);
-  if (!isClickInsideElement) {
-    closeNav(navList);
-  }
 }
 
 customElements.define("nav-component", NavComponent);
