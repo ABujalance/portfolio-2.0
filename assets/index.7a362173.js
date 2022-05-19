@@ -49,15 +49,17 @@ var p=Object.defineProperty;var h=(n,e,t)=>e in n?p(n,e,{enumerable:!0,configura
   </div>
 </div>
 `;const E=[{icon:"web",id:"frontend",title:"Front-End",skillList:["skill but is a very long lorem sentence lorem ipsum","<b>another skill shorter</b>","skill","skill","skill"]},{icon:"dns",id:"backend",title:"Back-End",skillList:["skill","skill","skill","skill"]},{icon:"people",id:"code",title:"code",skillList:["skill","skill","skill"]}],w=[{name:"web",id:"web1",percentage:"50%"},{name:"web",id:"web2",percentage:"30%"},{name:"web",id:"web3",percentage:"100%"}];class y extends a{constructor(){super();const e=document.createElement("template");e.innerHTML=g,this.appendChild(e.content.cloneNode(!0))}buildSkillsList(){const e=this.querySelector("#skills-list");E.forEach(t=>{const s=document.createElement("skill-set-component");s.setAttribute("icon",t.icon),s.setAttribute("id",t.id),s.setAttribute("title",t.title),s.setAttribute("skillList",t.skillList),e.appendChild(s)})}buildSkillsStats(){const e=this.querySelector("#skills-stats");w.forEach(t=>{const s=document.createElement("skill-bar-component");s.setAttribute("name",t.name),s.setAttribute("id",t.id),s.setAttribute("percentage",t.percentage),e.appendChild(s)})}connectedCallback(){this.buildSkillsStats(),this.buildSkillsList(),super.connectedCallback();const e=document.getElementById("switch-button");e.addEventListener("click",C),e.addEventListener("mousedown",t=>t.preventDefault())}}function C(){const n=document.querySelector("#skills-card");n.classList.contains("is-flipped")?n.classList.remove("is-flipped"):n.classList.add("is-flipped"),this.classList.contains("active")?this.classList.remove("active"):this.classList.add("active")}customElements.define("skills-component",y);var S=`<div id="nav" class="nav">
-  <button id="nav-button" class="nav__button hide-gt-mobile"><i class="material-icons font__size-l" title="open menu">menu</i></button>
+  <button id="nav-button" class="nav__button hide-gt-mobile">
+    <i class="material-icons font__size-l" title="open menu">menu</i>
+  </button>
   <div id="nav-list" class="nav__bar">
-    <span class="hide-mobile">Logo</span>
-    <nav class="nav__list">
+    <a href="#landing" class="nav__logo"></a>
+    <nav class="nav__list font__size-ml">
       <button id="nav-close" class="hide-lt-tablet nav__list__close">
         <i class="material-icons" title="switch bar chart mode">close</i>
       </button>
-      <a href="#landing">Landing</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#footer">Contact</a>
     </nav>
   </div>
