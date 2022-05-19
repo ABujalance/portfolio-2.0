@@ -6,8 +6,11 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background: url("../images/logo.svg");
+  background-repeat: no-repeat;
   background-color: colors.$background;
   background-attachment: fixed;
+  background-position: center;
   color: colors.$base;
   margin: 0;
 }
