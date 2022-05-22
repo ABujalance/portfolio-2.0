@@ -19,7 +19,7 @@ body {
 #modal-background {
   background-color: black;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 100px);
   display: block;
   position: fixed;
   z-index: 9;
