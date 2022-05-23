@@ -15,7 +15,6 @@ body {
   margin: 0;
 }
 
-
 #modal-background {
   background-color: black;
   width: 100vw;
@@ -37,16 +36,10 @@ body.modal {
   overflow-y: hidden;
 }
 
-section {
-  height: 100vh;
-  max-height: 100vh;
-}
-
 h1 {
   margin: 0;
 }
 
-
 @import "./typography.scss";
 @import "./components.scss";
-@import "./layout.scss"
+@import "./layout.scss";
