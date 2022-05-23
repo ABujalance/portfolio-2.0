@@ -25,11 +25,10 @@
     }
   }
 
-  &__form {
-    display: flex;
+  &__content {
+    margin-top: 2rem;
     flex: 1;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
+
+  &__links {}
 }

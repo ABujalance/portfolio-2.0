@@ -40,6 +40,10 @@ h1 {
   margin: 0;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @import "./typography.scss";
 @import "./components.scss";
 @import "./layout.scss";
