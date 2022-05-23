@@ -28,7 +28,11 @@
   &__content {
     margin-top: 2rem;
     flex: 1;
+    max-width: 700px;
+    width: 90%;
   }
 
-  &__links {}
+  &__links {
+    margin: 20px;
+  }
 }

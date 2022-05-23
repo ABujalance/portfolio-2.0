@@ -1,0 +1,16 @@
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  & a {
+    color: colors.$identity;
+
+    &:hover {
+      color: colors.$base;
+    }
+
+    & svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
