@@ -3,6 +3,7 @@
   width: 100%;
   top: 0;
   height: 150px;
+  overflow: hidden;
 
   @include breakpoints.tablet {
     height: 100px;
@@ -21,8 +22,8 @@
   &:before {
     content: "";
     position: absolute;
-    left: -200px;
-    width: 55%;
+    left: calc(50% - 200px);
+    width: 40px;
     height: 100%;
     top: 0;
     background-color: colors.$base;
@@ -33,30 +34,30 @@
     transform: skew(250deg);
 
     @include breakpoints.tablet {
-      left: -130px;
+      left: calc(50% - 130px)
     }
 
     @include breakpoints.mobile {
-      left: -70px;
+      left: calc(50% - 130px)
     }
   }
 
   &:after {
     content: "";
     position: absolute;
-    right: -200px;
-    width: 55%;
+    right: calc(50% - 200px);
+    width: 50px;
     height: 100%;
     top: 0;
     background-color: colors.$base;
     transform: skew(-250deg);
 
     @include breakpoints.tablet {
-      right: -130px;
+      right: calc(50% - 130px);
     }
 
     @include breakpoints.mobile {
-      right: -70px;
+      right: calc(50% - 70px);
     }
   }
 }
