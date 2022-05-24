@@ -74,5 +74,11 @@
         @include font-sizes();
       }
     }
+
+    &__desktop-large {
+      @include breakpoints.desktop-large {
+        @include font-sizes();
+      }
+    }
   }
 }
