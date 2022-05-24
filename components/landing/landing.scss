@@ -4,7 +4,34 @@
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: center;
   text-align: center;
   flex-direction: column;
+
+  &__title {
+    margin-top: 20px;
+  }
+
+  &__about {
+    flex: 1;
+  }
+
+  &__button {
+    justify-self: flex-end;
+    color: colors.$base;
+    font-weight: bold;
+    background-color: colors.$identity;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-shadow: 0 0 8px colors.$shadow;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: colors.$dark-accent;
+    }
+
+    &:active {
+      background-color: colors.$dark-accent;
+    }
+  }
 }
