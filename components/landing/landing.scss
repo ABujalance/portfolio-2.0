@@ -1,33 +1,37 @@
 .landing {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
+  flex-direction: column;
 
-  &__provisional {
-    font-weight: bolder;
-    color: #000;
-    background-color: colors.$base;
-    border-radius: 4px;
-    padding: 14px 28px;
-    font-size: 24px;
-    text-align: center;
+  &__title {
+    margin-top: 20px;
   }
 
-  &__shadow-link {
-    text-shadow: 1px 1px 1px colors.$background;
-    text-decoration: none;
-    color: colors.$identity !important;
+  &__about {
+    flex: 1;
+  }
 
-    &:active {
-      text-shadow: none;
+  &__button {
+    justify-self: flex-end;
+    color: colors.$base;
+    font-weight: bold;
+    background-color: colors.$identity;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-shadow: 0 0 8px colors.$shadow;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: colors.$dark-accent;
     }
 
-    &:visited {
-      color: inherit;
+    &:active {
+      background-color: colors.$dark-accent;
     }
   }
 }

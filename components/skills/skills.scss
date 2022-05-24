@@ -30,7 +30,6 @@
     & i {
       font-size: 50px;
 
-
       @include breakpoints.mobile {
         font-size: 35px;
       }
@@ -75,12 +74,10 @@
       &:focus {
         background-color: colors.$accent;
       }
-
     }
   }
 
   &__content {
-    $background: #222;
     color: colors.$background;
     background-color: colors.$base;
     border-radius: 30px;
