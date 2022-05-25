@@ -1,44 +1,34 @@
 .contact-form {
   display: flex;
-  gap: 12px;
-  flex: 1;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 24px;
 
   &__email {
+    margin-top: 12px;
     font-family: "Open Sans", sans-serif;
     width: 100%;
     height: 30px;
-
-    &:invalid {
-      border: 3px solid colors.$dark-accent;
-    }
-
-    &:valid {
-      border: 3px solid colors.$identity;
-    }
+    border-radius: 20px;
+    padding: 5px;
   }
 
   &__message {
+    margin-top: 12px;
     font-family: "Open Sans", sans-serif;
     width: 100%;
     height: 150px;
-
-    &:invalid {
-      border: 3px solid colors.$dark-accent;
-    }
-
-    &:valid {
-      border: 3px solid colors.$identity;
-    }
+    border-radius: 20px;
+    padding: 5px;
   }
 
   &__button {
+    margin-top: 12px;
     background-color: colors.$identity;
     width: 150px;
     height: 50px;
+    border-radius: 20px;
 
     &:hover {
       background-color: colors.$base;

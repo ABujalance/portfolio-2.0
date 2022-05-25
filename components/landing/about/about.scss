@@ -1,22 +1,29 @@
 .about {
   display: flex;
-  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 
   &__content {
+    text-align: justify;
+    position: relative;
     color: colors.$background;
     background-color: colors.$base;
-    border: 10px solid colors.$dark-accent;
     border-radius: 20px;
     box-shadow: 5px 10px 10px colors.$shadow;
     padding: 20px;
+
+    &__location {
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+    }
   }
 
   &__picture {
-    border: 10px solid colors.$identity;
-    border-radius: 20px;
+    float: right;
+    float: top;
+    border-radius: 50%;
     box-shadow: 5px 10px 10px colors.$shadow;
     width: 300px;
     height: 300px;
@@ -25,6 +32,7 @@
     background-position: center;
     background-image: url("../../../images/profile.webp");
     margin-left: 16px;
+    margin-bottom: 16px;
 
     .no-js & {
       background-image: url("../../../images/profile.jpg");
@@ -38,6 +46,16 @@
     @include breakpoints.mobile {
       width: 150px;
       height: 150px;
+    }
+
+    @include breakpoints.desktop-large {
+      width: 350px;
+      height: 350px;
+    }
+
+    @include breakpoints.short-screen {
+      width: 100px;
+      height: 100px;
     }
   }
 
