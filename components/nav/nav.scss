@@ -28,7 +28,7 @@
     border: none;
     font: inherit;
     background: transparent;
-    opacity: 0.4;
+    opacity: 1;
     border-radius: 5px;
     transition: opacity 0.4s ease;
     color: colors.$identity;
@@ -93,7 +93,7 @@
     & a {
       text-shadow: 1px 1px 1px colors.$background;
       text-decoration: none;
-      color: colors.$base !important;
+      color: colors.$base  !important;
       font-size: 2rem;
 
       @include breakpoints.tablet {

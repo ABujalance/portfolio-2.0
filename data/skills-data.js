@@ -4,11 +4,11 @@ export const skills = [
     id: "frontend",
     title: "Front-End",
     skillList: [
-      "<b>Vanilla</b> web development: Html 5 | Cs3 | Javascript",
-      "<b>Accesible</b> performant and responsive sites",
-      "<b>Modern</b> frameworks specially <b>React</b>",
-      "<b>Clean code</b> testing and best practices",
-      "<b>Server Side Rendering</b>",
+      "<b><span class='font__color-identity'>Vanilla</span></b> web development: Html 5 | Cs3 | Javascript 🖥️",
+      "<b><span class='font__color-identity'>Accesible</span></b> performant and responsive sites 👨‍💻",
+      "<b><span class='font__color-identity'>Modern</span></b> frameworks specially <b><span class='font__color-identity'>React</span></b>",
+      "<b><span class='font__color-identity'>Clean code</span></b> testing and best practices ✅",
+      "<b><span class='font__color-identity'>Server Side Rendering</span></b>",
     ],
   },
   {
@@ -16,10 +16,11 @@ export const skills = [
     id: "backend",
     title: "Back-End",
     skillList: [
-      "<b>Languages</b>: Nodejs | Java",
-      "<b>Frameworks</b>: Spring | Express | <b>Nestjs</b>",
-      "<b>Serverless</b> computing",
-      "<b>Sql</b> and NoSql databases",
+      "<b><span class='font__color-identity'>Languages</span></b>: Nodejs | Java",
+      "<b><span class='font__color-identity'>Frameworks</span></b>: Spring | Express | <b><span class='font__color-identity'>Nestjs</span></b>",
+      "<b><span class='font__color-identity'>Serverless</span></b> computing ☁️",
+      "<b><span class='font__color-identity'>Sql</span></b> and NoSql databases 💽",
+      "<b><span class='font__color-identity'>Technologies</span></b>: Firebase | AWS | Google Cloud | Git | CI 🤖",
     ],
   },
   {
@@ -27,14 +28,11 @@ export const skills = [
     id: "code",
     title: "Personal",
     skillList: [
-      "Experience with <b>Distributed</b> and <b>International teams</b>",
-      "<b>Languages</b>: English (Bilingual) | Spanish (Native)",
-      "Experience with <b>Agile Methodologies</b>",
-      "",
-      "",
-      "",
-      "",
-      "Volleyball  <span class='font__size-s'>I'm pretty bad but still have fun</span>",
+      "Experience with <b><span class='font__color-identity'>Distributed</span></b> and <b><span class='font__color-identity'>International teams 🌐</span></b>",
+      "<b><span class='font__color-identity'>Languages</span></b>: English 🇬🇧 (Bilingual) | Spanish 🇪🇸 (Native)",
+      "Experience with <b><span class='font__color-identity'>Agile Methodologies</span></b>",
+      "Excellent <b><span class='font__color-identity'>Mentor</span></b> 👨‍🏫 and writter",
+      "Volleyball 🏐  <span class='font__size-s font__color-accent'>(I'm pretty bad but still have fun)</span>",
     ],
   },
 ];
@@ -42,8 +40,9 @@ export const skills = [
 export const stats = [
   { name: "Html 5, Css 3", id: "html", percentage: "90%" },
   { name: "NodeJS", id: "node", percentage: "60%" },
+  { name: "React", id: "react", percentage: "90%" },
   { name: "Design", id: "design", percentage: "30%" },
   { name: "Javascript, Typescript", id: "js", percentage: "80%" },
   { name: "Databases", id: "db", percentage: "50%" },
-  { name: "Java", id: "java", percentage: "40%" },
+  { name: "Software Patterns", id: "java", percentage: "60%" },
 ];
