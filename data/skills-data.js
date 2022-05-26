@@ -18,8 +18,8 @@ export const skills = [
     skillList: [
       "<b>Languages</b>: Nodejs | Java",
       "<b>Frameworks</b>: Spring | Express | <b>Nestjs</b>",
-      "skill",
-      "skill",
+      "<b>Serverless</b> computing",
+      "<b>Sql</b> and NoSql databases",
     ],
   },
   {
@@ -28,7 +28,12 @@ export const skills = [
     title: "Personal",
     skillList: [
       "Experience with <b>Distributed</b> and <b>International teams</b>",
-      "skill",
+      "<b>Languages</b>: English (Bilingual) | Spanish (Native)",
+      "Experience with <b>Agile Methodologies</b>",
+      "",
+      "",
+      "",
+      "",
       "Volleyball  <span class='font__size-s'>I'm pretty bad but still have fun</span>",
     ],
   },
@@ -41,9 +46,4 @@ export const stats = [
   { name: "Javascript, Typescript", id: "js", percentage: "80%" },
   { name: "Databases", id: "db", percentage: "50%" },
   { name: "Java", id: "java", percentage: "40%" },
-  {
-    name: "Volleyball",
-    id: "web3",
-    percentage: "10%",
-  },
 ];

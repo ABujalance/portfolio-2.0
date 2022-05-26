@@ -14,12 +14,8 @@ export class SkillSetComponent extends HTMLElementWithTemplate {
     super.connectedCallback();
     const { id } = this.attributes;
     this.buildSkillSet();
-    document
-      .getElementById(`show-skills-${id.value}`)
-      .addEventListener("click", () => onShowSkillHandler(id.value));
-    document
-      .getElementById(`close-${id.value}`)
-      .addEventListener("click", () => onShowSkillHandler(id.value));
+    document.getElementById(`show-skills-${id.value}`).addEventListener("click", () => onShowSkillHandler(id.value));
+    document.getElementById(`close-${id.value}`).addEventListener("click", () => onShowSkillHandler(id.value));
   }
 
   buildSkillSet() {
