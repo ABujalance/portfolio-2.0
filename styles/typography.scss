@@ -80,5 +80,17 @@
         @include font-sizes();
       }
     }
+
+    &__lt-desktop {
+      @include breakpoints.lt-desktop {
+        @include font-sizes();
+      }
+    }
+
+    &__short-screen {
+      @include breakpoints.short-screen {
+        @include font-sizes();
+      }
+    }
   }
 }
