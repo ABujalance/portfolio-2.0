@@ -8,3 +8,5 @@ import { SkillBarComponent } from "./components/skills/skill-bar/skill-bar";
 import { ContactFormComponent } from "./components/footer/contact-form/contact-form";
 import { FooterLinksComponent } from "./components/footer/footer-links/footer-links";
 import { AboutComponent } from "./components/landing/about/about";
+import { ProjectsComponent } from "./components/projects/projects";
+import { ProjectComponent } from "./components/projects/project/project";

@@ -1,0 +1,10 @@
+.projects {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    max-width: 1700px;
+  }
+}
