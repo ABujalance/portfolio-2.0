@@ -75,12 +75,6 @@
       }
     }
 
-    &__desktop-large {
-      @include breakpoints.desktop-large {
-        @include font-sizes();
-      }
-    }
-
     &__lt-desktop {
       @include breakpoints.lt-desktop {
         @include font-sizes();
@@ -89,6 +83,11 @@
 
     &__short-screen {
       @include breakpoints.short-screen {
+        @include font-sizes();
+      }
+    }
+    &__desktop-large {
+      @include breakpoints.desktop-large {
         @include font-sizes();
       }
     }

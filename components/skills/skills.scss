@@ -11,19 +11,15 @@
     background-color: colors.$accent;
     color: colors.$base;
     border: none;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 5px;
+    border-radius: 30px;
     padding: 5px;
     width: 60px;
     height: 60px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     box-shadow: -1px 1px 10px 3px colors.$shadow;
     transition: background-color 0.3s ease, color 0.3s ease;
-
-
-
 
     @include breakpoints.mobile {
       width: 50px;
