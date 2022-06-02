@@ -6,8 +6,9 @@ export const skills = [
     skillList: [
       "<b><span class='font__color-identity'>Vanilla</span></b> web development: Html 5 | Cs3 | Javascript 🖥️",
       "<b><span class='font__color-identity'>Accesible</span></b> performant and responsive sites 👨‍💻",
-      "<b><span class='font__color-identity'>Modern</span></b> frameworks specially <b><span class='font__color-identity'>React</span></b>",
+      "<b><span class='font__color-identity'>Modern</span></b> frameworks <b><span class='font__color-identity'>React</span></b>",
       "<b><span class='font__color-identity'>Clean code</span></b> testing and best practices ✅",
+      "Nextjs | <b><span class='font__color-identity'>Sass</span></b>💅 | <b><span class='font__color-identity'>Rollup</span></b> | Vite | Webpack",
       "<b><span class='font__color-identity'>Server Side Rendering</span></b>",
     ],
   },
