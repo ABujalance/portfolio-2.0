@@ -25,7 +25,6 @@ function hidePolicy() {
 }
 
 function isPolicyAccepted() {
-  debugger;
   var dc = document.cookie;
   var prefix = "accepted_policy=";
   var begin = dc.indexOf("; " + prefix);
@@ -43,7 +42,6 @@ function isPolicyAccepted() {
 }
 
 function onPolicyClick() {
-  debugger;
   var date = new Date();
   date.setMonth(date.getMonth() + 6);
   document.cookie = `accepted_policy=true; expires=${date.toUTCString()}`;
