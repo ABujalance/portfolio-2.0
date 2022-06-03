@@ -10,3 +10,4 @@ import { FooterLinksComponent } from "./components/footer/footer-links/footer-li
 import { AboutComponent } from "./components/landing/about/about";
 import { ProjectsComponent } from "./components/projects/projects";
 import { ProjectComponent } from "./components/projects/project/project";
+import { PolicyComponent } from "./components/policy/policy";

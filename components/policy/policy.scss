@@ -1,0 +1,22 @@
+.policy {
+  position: fixed;
+  bottom: 0;
+  background-color: colors.$base;
+  color: black;
+  padding: 8px;
+
+  &__button {
+    margin-left: 12px;
+    background-color: colors.$shadow;
+    color: colors.$base;
+    border-radius: 5px;
+    border: none;
+
+
+    &:hover {
+      background-color: colors.$base;
+      color: colors.$shadow;
+    }
+
+  }
+}
