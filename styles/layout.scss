@@ -11,8 +11,6 @@
         }
     }
 
-
-
     &-tablet {
         @include breakpoints.tablet {
             display: none;
