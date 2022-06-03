@@ -9,6 +9,21 @@ export class ProjectComponent extends HTMLElementWithTemplate {
     template.innerHTML = htmlTemplate;
     this.appendChild(template.content.cloneNode(true));
   }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.buildTags();
+  }
+
+  buildTags() {
+    const { tags } = this.attributes;
+    const projectTagsElement = this.querySelector(`#project-tags`);
+    tags.value.split(",").forEach((tag) => {
+      const listElement = document.createElement("li");
+      listElement.innerHTML = tag;
+      projectTagsElement.appendChild(listElement);
+    });
+  }
 }
 
 customElements.define("project-component", ProjectComponent);
