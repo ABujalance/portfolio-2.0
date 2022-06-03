@@ -22,7 +22,7 @@
 
     @include breakpoints.mobile {
         width: fit-content;
-        max-width: 300px;
+        min-width: 250px;
         padding: 12px
     }
 
@@ -52,10 +52,15 @@
 
     &__view-more {
         padding: 6px;
+        font-weight: bold;
         width: fit-content;
         color: colors.$dark-accent;
         border-radius: 10px;
         border: 4px solid colors.$dark-accent;
+
+        @include breakpoints.mobile {
+            border: 2px solid colors.$dark-accent;
+        }
 
         &:hover {
             background-color: colors.$dark-accent;

@@ -23,7 +23,6 @@ export class ProjectsComponent extends HTMLElementWithTemplate {
       const projectListElement = document.createElement("li");
       projectListElement.appendChild(projectComponent);
       projectsList.appendChild(projectListElement);
-      debugger;
     });
   }
 

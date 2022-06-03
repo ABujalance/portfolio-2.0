@@ -8,6 +8,10 @@
   margin-bottom: -16px;
   justify-content: center;
 
+  @include breakpoints.mobile {
+    padding: 16px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: center;
