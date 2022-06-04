@@ -1,22 +1,19 @@
 .policy {
   position: fixed;
   bottom: 0;
-  background-color: colors.$base;
-  color: black;
+  background-color: colors.$shadow;
+  color: colors.$base;
   padding: 8px;
+
+  & a {
+    color: colors.$identity;
+  }
 
   &__button {
     margin-left: 12px;
-    background-color: colors.$shadow;
-    color: colors.$base;
+    background-color: colors.$base;
+    color: colors.$shadow;
     border-radius: 5px;
     border: none;
-
-
-    &:hover {
-      background-color: colors.$base;
-      color: colors.$shadow;
-    }
-
   }
 }
