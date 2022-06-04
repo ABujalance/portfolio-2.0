@@ -155,7 +155,7 @@ var h=Object.defineProperty;var b=(n,e,t)=>e in n?h(n,e,{enumerable:!0,configura
       <a
         href="\${link}"
         target="blank"
-        class="project__description__button font__size-l"
+        class="project__description__button font__size-ml"
         >Check it!</a
       >
     </div>
