@@ -4,7 +4,7 @@ export const projects = [
     title: "Portfolio 2.0",
     description:
       "<span class='font__color-identity'><b>New portfolio</b></span> made using <span class='font__color-dark-accent'><b>vanilla-only</b></span> technologies. </br> It started as a way to test my knowledge in web development. </br>The design is simple but it's fast and reliable",
-    link: "https://tilemapper.abujalance.com/",
+    link: "https://www.abujalance.com/",
     image:
       "https://res.cloudinary.com/abujalance/image/upload/w_400/v1654350516/portfolio_zdw0pb.png",
     tags: [
