@@ -13,11 +13,20 @@ export class ProjectComponent extends HTMLElementWithTemplate {
   connectedCallback() {
     super.connectedCallback();
     this.buildTags();
+    this.buildDescription();
+  }
+
+  buildDescription() {
+    const { description, id } = this.attributes;
+    const projectDescriptionElement = this.querySelector(
+      `#project-description-${id.value}`
+    );
+    projectDescriptionElement.innerHTML = description.value;
   }
 
   buildTags() {
-    const { tags } = this.attributes;
-    const projectTagsElement = this.querySelector(`#project-tags`);
+    const { tags, id } = this.attributes;
+    const projectTagsElement = this.querySelector(`#project-tags-${id.value}`);
     tags.value.split(",").forEach((tag) => {
       const listElement = document.createElement("li");
       listElement.innerHTML = tag;

@@ -15,6 +15,7 @@ export class ProjectsComponent extends HTMLElementWithTemplate {
     const projectsList = this.querySelector("#projects-list");
     projects.forEach((project) => {
       const projectComponent = document.createElement("project-component");
+      projectComponent.setAttribute("id", project.id);
       projectComponent.setAttribute("title", project.title);
       projectComponent.setAttribute("description", project.description);
       projectComponent.setAttribute("link", project.link);

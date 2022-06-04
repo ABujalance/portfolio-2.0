@@ -9,20 +9,15 @@
   margin-bottom: 84px;
   min-height: 450px;
   padding: 24px;
-  width: 400px;
+  width: 350px;
   box-shadow: 0 10px 12px 1px colors.$shadow;
 
-  @include breakpoints.desktop {
-    height: 450px;
-  }
-
-  @include breakpoints.tablet {
+  @include breakpoints.lt-desktop {
     width: 300px;
   }
 
-  @include breakpoints.mobile {
-    width: fit-content;
-    min-width: 250px;
+  @include breakpoints.mobile-sm {
+    width: 250px;
     padding: 12px;
   }
 
