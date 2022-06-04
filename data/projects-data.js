@@ -21,7 +21,7 @@ export const projects = [
     id: "mapper",
     title: "Awesome Mapper",
     description:
-      "<span class='font__color-identity'><b>Map generator</b></span> based on custom png files and a tile map.</br> It uses different size brushes and tools.",
+      "<span class='font__color-identity'><b>Map generator</b></span> based on custom png files and a tile map.</br> It uses different size brushes and tools.</br> The design is currently being reviewed to offer a more usable look",
     link: "https://tilemapper.abujalance.com/",
     image:
       "https://res.cloudinary.com/abujalance/image/upload/w_400/v1654191018/awesomeMapper_aaxyna.jpg",
