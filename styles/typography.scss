@@ -20,8 +20,8 @@
   }
 
   &-m {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
   }
 
   &-standard {
@@ -65,6 +65,12 @@
 
     &__tablet {
       @include breakpoints.tablet {
+        @include font-sizes();
+      }
+    }
+
+    &__mobile-sm {
+      @include breakpoints.mobile-sm {
         @include font-sizes();
       }
     }

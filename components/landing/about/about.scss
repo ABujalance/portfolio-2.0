@@ -44,6 +44,14 @@
     .no-js & {
       background-image: url("../../../images/profile.jpg");
     }
+
+    @include breakpoints.tablet {
+      width: 100%;
+    }
+
+    @include breakpoints.mobile {
+      width: 200%;
+    }
   }
 
   &__link {
