@@ -148,7 +148,7 @@ var b=Object.defineProperty;var h=(n,e,t)=>e in n?b(n,e,{enumerable:!0,configura
   <div class="project__cover">
     <div class="project__description font__color-base">
       <span
-        class="project__description__text font__size-ml font__size__mobile-sm-m"
+        class="project__description__text font__size-ml font__size__mobile-sm-m-project"
         id="project-description-\${id}"
       >
       </span>
