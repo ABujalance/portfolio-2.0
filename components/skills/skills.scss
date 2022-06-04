@@ -108,6 +108,7 @@
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
       gap: 20px;
+      transform: rotateX(0deg);
 
       @include breakpoints.lt-desktop {
         grid-auto-flow: row;
