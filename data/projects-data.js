@@ -4,7 +4,7 @@ export const projects = [
     title: "That Open Platform",
     link: "https://platform.thatopen.com/",
     description:
-      "<span class='font__color-identity'><b>That Open Company</b></span> is a company trying to free the <span class='font__color-identity'><b>BIM</b></span> world. I helped them achieve their dream by creating a platform to visuallize IFC files and so much more.</br> It uses their <span class='font__color-identity'><b>open source</b></span> technology to visuallize files that, in combination with this full-stack solution, make for a compelling SaaS",
+      "<span class='font__color-identity'><b>That Open Company</b></span> is a company trying to free the <span class='font__color-identity'><b>BIM</b></span> world. I helped them achieve their dream by creating a platform to visuallize 3D architecture files.</br> It's a full-stack solution that uses their <span class='font__color-identity'><b>open source technology</b></span> to visualize files and create a compelling SaaS",
     image:
       "https://res.cloudinary.com/dylz8wfsa/image/upload/v1701791744/Screenshot_2023-12-05_at_16.51.31_ysop0m.png",
     tags: [
